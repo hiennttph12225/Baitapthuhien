@@ -35,7 +35,7 @@ ul{
     padding: 0;
     margin: 0;
 }
-li{
+ul li{
     
     list-style-type: none;
     display: flex;
@@ -44,7 +44,7 @@ li{
     align-items: center;
     color: #5f727f;
 }
-li:nth-child(odd){
+ul li:nth-child(odd){
 background-color: #f4f6f7;
 }
 .title{
@@ -52,13 +52,11 @@ background-color: #f4f6f7;
     color: #8a98a1;
     
 }
-h2{
+h2,h3{
     font-weight: 200;
 }
     
-h3{
-    font-weight: 200;
-}
+
 
 .img-text{
     position: relative;
@@ -76,52 +74,63 @@ h3{
     
 }
 
-.btn{
+.box-btn{
     display: flex;
     justify-content: center;
     height: 100px;
-    
     align-items: center;
-   
 
 }
-.btn-2{
+.btn{
+    padding: 10px 30px;
     background-color: white;
+
+}
+
+
+.btn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+
+.btn-purple{
+    
     color: #6c136f;
     border: 2px solid #6c136f;
-    padding: 10px 30px;
+   
 }
-.btn-1{
-    background-color: white;
+.btn-blue{
+  
     color: #2196f7;
     border: 2px solid #2196f7;
-    padding: 10px 30px;
+    
 }
-.btn-3{
-    background-color: white;
+.btn-green{
+   
     color: #32ad1e;
     border: 2px solid #32ad1e;
-    padding: 10px 30px;
+    
 }
-.btn-2:hover {
-    cursor: pointer;
+.btn-purple:hover {
+    
     background-color: #6c136f;
-    color: white;
+    
 }
-.btn-1:hover {
-    cursor: pointer;
+.btn-blue:hover {
+    
     background-color: #2196f7;
-    color: white;
+    
 }
-.btn-3:hover {
-    cursor: pointer;
+.btn-green:hover {
+    
     background-color: #32ad1e;
-    color: white;
+    
 }
 p{
     font-size: x-small;
 }
-.text-price{
+.price-white{
     border-radius: 100%;
     background-color: white;
     width: 100px;
@@ -155,7 +164,7 @@ p{
 
     
 }
-.text-price2{
+.price-black{
     border-radius: 100%;
     background-color: rgb(3, 3, 3);
     width: 100px;
@@ -168,24 +177,24 @@ p{
     left: 34%
 
 }
-.text-cl{
+.text-cl-blue{
     color: #2196f7;
 }
 .bg-text-cl{
     background-color: black;
 }
-.text-cl2{
+.text-cl-purple{
 
     color: #6c136f;
 }
-.text-cl3{
+.text-cl-green{
     color: #32ad1e;
 }
 .text-color{
     color: #5f727f;
 }
 
-@media only screen and (max-width:800px){
+@media all and (max-width:800px){
     .container{
         width: auto;
         margin: auto;
