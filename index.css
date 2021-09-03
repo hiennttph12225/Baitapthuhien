@@ -43,7 +43,7 @@ img {
   width: 100%;
   max-width: 340px;
 }
-.opacity {
+.opacity-low {
   opacity: 0.7;
   position: absolute;
   width: 100%;
@@ -69,9 +69,9 @@ img {
 ul {
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 ul li {
-  list-style-type: none;
   display: flex;
   justify-content: center;
   height: 55px;
@@ -95,12 +95,12 @@ h3 {
   position: relative;
 }
 
-.text {
+.text-in-img {
   text-align: center;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 40%;
+  top: 30%;
 }
 
 .box-btn {
@@ -114,28 +114,28 @@ h3 {
   padding: 10px 30px;
 }
 
-.border-purple {
+.btn-purple {
   border: 2px solid #6c136f;
 }
 
-.border-blue {
+.btn-blue {
   border: 2px solid #2196f7;
 }
 
-.border-green {
+.btn-green {
   border: 2px solid #32ad1e;
 }
-.border-purple:hover {
+.btn-purple:hover {
   background-color: #6c136f;
   color: white;
   cursor: pointer;
 }
-.border-blue:hover {
+.btn-blue:hover {
   background-color: #2196f7;
   color: white;
   cursor: pointer;
 }
-.border-green:hover {
+.btn-green:hover {
   background-color: #32ad1e;
   color: white;
   cursor: pointer;
@@ -152,7 +152,7 @@ h3 {
   text-align: center;
   left: 34%;
 }
-.-mt-4 {
+.mt-n4 {
   margin-top: -1rem;
 }
 
