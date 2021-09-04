@@ -112,6 +112,7 @@ h3 {
 
 .btn {
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .btn-purple {
@@ -133,7 +134,6 @@ h3 {
 .btn-blue:hover {
   background-color: #2196f7;
   color: white;
-  cursor: pointer;
 }
 .btn-green:hover {
   background-color: #32ad1e;
