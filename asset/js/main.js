@@ -10,21 +10,17 @@ const password = document.querySelector("#exampleInputPassword");
 const rePassword = document.querySelector("#exampleInputRePassword");
 let succesStatus = false
 
-//hàm check kí tự đặc biệt
 const handleCheckSpecialCharacters = (charaters) => {
   return charaters.match(regex_check_special_characters);
 };
-//hàm check email
 const handleCheckEmail = (email) => {
   return regex_check_email.test(String(email).toLowerCase());
 };
-// check đăng kí thành công
 const checkSignUpSucces = () =>{
     if(!succesStatus){
         alert('Đăng kí thành công')
     }
 }
-//submit form
 const handleSubmit = () => {
   if (
     name.value == "" ||
