@@ -6,7 +6,7 @@ const regexCheckEmail =
 const name = document.querySelector("#nameInput");
 const email = document.querySelector("#email");
 const nameErrors = document.querySelector("#nameErrors");
-const password = document.querySelector("#exampleInputPassword");
+const password = document.querySelector("#password");
 const rePassword = document.querySelector("#exampleInputRePassword");
 let succesStatus = false
 
