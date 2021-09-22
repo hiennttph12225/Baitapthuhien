@@ -1,7 +1,7 @@
 const regexCheckSpecialCharacters =
   /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
-var validRegexEmail =
+const regexCheckEmail =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const name = document.querySelector("#nameInput");
 const email = document.querySelector("#exampleInputEmail1");
