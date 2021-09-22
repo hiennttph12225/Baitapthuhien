@@ -1,4 +1,4 @@
-const regex_check_special_characters =
+const regexCheckSpecialCharacters =
   /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
 var validRegexEmail =
