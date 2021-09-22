@@ -1,17 +1,17 @@
-const regex_check_special_characters =
+const regexCheckSpecialCharacters   =
   /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
-var validRegexEmail =
+const validRegexEmail =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const name = document.querySelector("#nameInput");
-const email = document.querySelector("#exampleInputEmail1");
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
 const nameErrors = document.querySelector("#nameErrors");
-const password = document.querySelector("#exampleInputPassword");
-const rePassword = document.querySelector("#exampleInputRePassword");
+const password = document.querySelector("#password");
+const rePassword = document.querySelector("#confirmPassword");
 let succesStatus = false
 
 const handleCheckSpecialCharacters = (charaters) => {
-  return charaters.match(regex_check_special_characters);
+  return charaters.match(regexCheckSpecialCharacters  );
 };
 const handleCheckEmail = (email) => {
   return regex_check_email.test(String(email).toLowerCase());
