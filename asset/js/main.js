@@ -1,68 +1,63 @@
-const regexCheckSpecialCharacters   =
-  /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+const regexCheckSpecialCharacters = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
-const validRegexEmail =
+var validRegexEmail =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const nameErrors = document.querySelector("#nameErrors");
 const password = document.querySelector("#password");
-const rePassword = document.querySelector("#confirmPassword");
-let succesStatus = false
+const confirmPassword = document.querySelector("#confirmPassword");
+let inValid = false;
 
 const handleCheckSpecialCharacters = (charaters) => {
-  return charaters.match(regexCheckSpecialCharacters  );
+  return charaters.match(regexCheckSpecialCharacters);
 };
 const handleCheckEmail = (email) => {
-  return regex_check_email.test(String(email).toLowerCase());
+  return validRegexEmail.test(email.toLowerCase());
 };
-const checkSignUpSucces = () =>{
-    if(!succesStatus){
-        alert('Đăng kí thành công')
-    }
-}
+const checkSignUpSuccces = () => {
+  if (!inValid) {
+    alert("Đăng kí thành công");
+  }
+};
 const handleSubmit = () => {
   if (
     name.value == "" ||
     email.value == "" ||
     password.value == "" ||
-    rePassword.value == ""
+    confirmPassword.value == ""
   ) {
-    succesStatus = true
+    inValid = true;
     alert("Vui lòng nhập vào chố trống");
     return false;
-  }
-  else{
-    succesStatus = false
+  } else {
+    inValid = false;
   }
   if (handleCheckSpecialCharacters(name.value)) {
-    succesStatus = true
+    inValid = true;
     alert("Vui lòng không chứa kí tự đặc biệt");
     return false;
-  }
-  else{
-    succesStatus = false
+  } else {
+    inValid = false;
   }
   if (!email.value.match(validRegexEmail)) {
-    succesStatus = true
+    inValid = true;
     alert("Định dạng email không đúng ");
     return false;
   }
   if (password.value.length <= 8 && password.value.length <= 32) {
-    succesStatus = true
+    inValid = true;
     alert("Mật khẩu từ 8- 32 kí tự");
     return false;
+  } else {
+    inValid = false;
   }
-  else{
-    succesStatus = false
-  }
-  if (rePassword.value !== password.value) {
-    succesStatus = true
+  if (confirmPassword.value !== password.value) {
+    inValid = true;
     alert("Xác nhận mật khẩu không trùng khớp");
     return false;
+  } else {
+    inValid = false;
   }
-  else{
-    succesStatus = false
-  }
-  checkSignUpSucces()
+  checkSignUpSuccces();
 };
