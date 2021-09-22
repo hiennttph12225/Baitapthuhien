@@ -3,7 +3,7 @@ const regexCheckSpecialCharacters =
 
 const regexCheckEmail =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const name = document.querySelector("#nameInput");
+const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const nameErrors = document.querySelector("#nameErrors");
 const password = document.querySelector("#password");
